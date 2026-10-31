@@ -175,6 +175,71 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cdl dt{color:var(--blue-soft);font-weight:600}
 .cdl dd{margin:0}
 @media (max-width:480px){.cdl{grid-template-columns:1fr}.cdl dd{margin-bottom:6px}}
+/* Schulungsraum */
+.train{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+@media (max-width:960px){.train{grid-template-columns:1fr}}
+.tiers{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px}
+.tiers li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;border-top:1px solid #2A3D5E;padding-top:10px}
+.tiers b{color:var(--on-navy);font-family:var(--f-display);font-weight:600}
+.tiers span{grid-column:1;font-size:.9rem;color:#A9B6CC}
+.tiers em{grid-column:2;grid-row:1/3;align-self:center;font-style:normal;font-family:var(--f-mono);color:var(--blue-soft);font-size:.9rem;text-align:right;white-space:nowrap}
+@media (max-width:480px){.tiers li{grid-template-columns:1fr}.tiers em{grid-column:1;grid-row:auto;text-align:left}}
+.room{background:#0B1629;border:1px solid #2A3D5E;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.room-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;background:#12233F;border-bottom:1px solid #2A3D5E;font-size:.78rem;color:#A9B6CC}
+.room-bar i{width:9px;height:9px;border-radius:50%;background:#2A3D5E}
+.room-bar span{margin-left:8px;font-family:var(--f-mono)}
+.room-body{display:grid;grid-template-columns:minmax(0,1fr) 150px}
+@media (max-width:520px){.room-body{grid-template-columns:1fr}.weeks{display:none!important}}
+.stage{padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.avatar-row{display:flex;gap:14px;align-items:center}
+.av svg{width:64px;height:64px;display:block}
+.av{border-radius:50%;box-shadow:0 0 0 3px #12233F,0 0 0 5px #2456D6}
+.av-meta{display:flex;flex-direction:column;gap:3px}
+.av-meta b{color:var(--on-navy);font-family:var(--f-display)}
+.ki-badge{align-self:flex-start;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#0B1629;background:#8FB4FF;border-radius:4px;padding:1px 7px}
+.wave{display:flex;gap:3px;align-items:flex-end;height:16px}
+.wave i{width:3px;height:4px;background:#8FB4FF;border-radius:2px;animation:wave 1s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}.wave i:nth-child(5){animation-delay:.6s}.wave i:nth-child(6){animation-delay:.75s}.wave i:nth-child(7){animation-delay:.9s}
+@keyframes wave{0%,100%{height:4px}50%{height:16px}}
+.scenes{position:relative;min-height:212px}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;gap:9px;opacity:0;animation:scene 20s linear infinite both}
+.s2{animation-delay:5s}.s3{animation-delay:10s}.s4{animation-delay:15s}
+@keyframes scene{0%{opacity:0;transform:translateY(8px)}2%,23%{opacity:1;transform:none}25%,100%{opacity:0;transform:none}}
+.sc-tag{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8FB4FF}
+.bubble,.q{background:#12233F;border:1px solid #2A3D5E;border-radius:4px 12px 12px 12px;padding:12px 14px;color:var(--on-navy);font-size:.95rem}
+.opt{border:1px solid #2A3D5E;border-radius:8px;padding:9px 12px;font-size:.9rem;color:#C9D4E6;display:flex;justify-content:space-between}
+.opt.good{animation:good 20s linear infinite both;animation-delay:5s}
+.opt.good span{opacity:0;animation:goodck 20s linear infinite both;animation-delay:5s}
+@keyframes good{0%,11%{border-color:#2A3D5E;background:transparent}13%,23%{border-color:#8FB4FF;background:rgba(143,180,255,.14)}25%,100%{border-color:#2A3D5E;background:transparent}}
+@keyframes goodck{0%,11%{opacity:0}13%,23%{opacity:1}25%,100%{opacity:0}}
+.msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:.9rem}
+.msg.me{align-self:flex-end;background:#2456D6;color:#fff;border-bottom-right-radius:4px}
+.msg.ai{background:#12233F;border:1px solid #2A3D5E;color:var(--on-navy);border-bottom-left-radius:4px;opacity:0;animation:reply 20s linear infinite both;animation-delay:10s}
+.msg.typing{display:flex;gap:4px;background:#12233F;border:1px solid #2A3D5E;width:max-content;animation:typing 20s linear infinite both;animation-delay:10s}
+.msg.typing i{width:6px;height:6px;border-radius:50%;background:#8FB4FF;animation:wave 1s infinite}
+.msg.typing i:nth-child(2){animation-delay:.2s}.msg.typing i:nth-child(3){animation-delay:.4s}
+@keyframes reply{0%,9%{opacity:0}11%,23%{opacity:1}25%,100%{opacity:0}}
+@keyframes typing{0%,3%{opacity:0}4%,9%{opacity:1}10%,100%{opacity:0;height:0;padding:0;border-width:0}}
+.chk{display:flex;gap:10px;align-items:center;font-size:.92rem;color:#C9D4E6;opacity:.3;animation:chk 20s linear infinite both}
+.chk span{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#2456D6;color:#fff;font-size:.75rem;flex:none}
+.c1{animation-delay:15.6s}.c2{animation-delay:16.4s}.c3{animation-delay:17.2s}
+@keyframes chk{0%{opacity:.3}2%,18%{opacity:1}20%,100%{opacity:.3}}
+.cert{margin-top:4px;align-self:flex-start;border:1px dashed #8FB4FF;border-radius:8px;padding:8px 12px;font-family:var(--f-mono);font-size:.8rem;color:#8FB4FF;opacity:0;animation:reply 20s linear infinite both;animation-delay:15.4s}
+.weeks{list-style:none;margin:0;padding:18px 14px;border-left:1px solid #2A3D5E;display:flex;flex-direction:column;gap:10px;counter-reset:wk;font-size:.82rem;color:#A9B6CC}
+.weeks li{counter-increment:wk;display:flex;gap:8px;align-items:center}
+.weeks li::before{content:counter(wk);display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid #2A3D5E;font-family:var(--f-mono);font-size:.72rem;flex:none}
+.weeks li.done{color:var(--on-navy)}
+.weeks li.done::before{content:"✓";background:#2456D6;border-color:#2456D6;color:#fff}
+.weeks .w3{color:var(--on-navy)}
+.weeks .w3::before{border-color:#8FB4FF;animation:pulse 1.6s ease-in-out infinite}
+.weeks .w4::before,.weeks .w5::before,.weeks .w6::before{animation:wkdone 20s linear infinite both}
+.weeks .w5::before{animation-delay:.3s}.weeks .w6::before{animation-delay:.6s}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(143,180,255,.5)}50%{box-shadow:0 0 0 5px rgba(143,180,255,0)}}
+@keyframes wkdone{0%,79%{background:transparent;border-color:#2A3D5E}81%,97%{background:#2456D6;border-color:#2456D6}99%,100%{background:transparent;border-color:#2A3D5E}}
+@media (prefers-reduced-motion:reduce){
+  .scene,.opt.good,.opt.good span,.msg.ai,.msg.typing,.chk,.cert,.wave i,.weeks li::before{animation:none!important}
+  .scene{position:static;opacity:0;display:none}.s1{display:flex;opacity:1}
+}
 /* Rechner */
 .calc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;margin-top:40px;align-items:start}
 @media (max-width:820px){.calc{grid-template-columns:1fr}}
@@ -462,6 +527,76 @@ footer a{color:var(--muted)}
     <p class="remote">Remote first: höchstens ein Tag vor Ort pro Mandat. Das hält die Kosten tief.</p>
   </div>
 </section>
+
+<section id="weiterbildung" class="dark">
+  <div class="wrap train">
+    <div>
+      <p class="eyebrow">Weiterbildung</p>
+      <h2>Der virtuelle Schulungsraum für Ihren KI-Beauftragten</h2>
+      <p class="lead">Komplett virtuell, im eigenen Tempo und am eigenen Betrieb. Ein KI-Avatar von Dr. Rolf-Michael Schröder führt durch sechs Wochen, ein KI-Tutor beantwortet Fragen rund um die Uhr, geprüft wird online. Das letzte Wort beim Prüfergebnis hat ein Mensch.</p>
+      <ul class="tiers">
+        <li><b>Stufe 1 · KI-Grundkompetenz</b><span>Für alle Mitarbeitenden, 3–4 Stunden, mit Nachweis nach EU AI Act Art. 4</span><em>CHF 90 pro Person</em></li>
+        <li><b>Stufe 2 · KI-Beauftragte/r</b><span>6 Wochen, rund 4 Stunden pro Woche, Praxisprojekt im eigenen Betrieb, Zertifikat</span><em>ab CHF 2'400 pro Person</em></li>
+        <li><b>Stufe 3 · Kaizen-Lead</b><span>3 Monate Begleitung, bis der Kreislauf selbständig läuft</span><em>CHF 900</em></li>
+        <li><b>Präsenz bei Ihnen vor Ort</b><span>Workshop mit Rolf-Michael Schröder, zum Beispiel als Kickoff fürs ganze Team</span><em>auf Anfrage</em></li>
+      </ul>
+      <div class="hero-actions"><a class="btn" href="mailto:beratung@blu-brain.ch?subject=Weiterbildung%20KI-Beauftragte">Weiterbildung anfragen</a></div>
+      <p class="fine">Preise netto. Firmenzertifikat von BLU BRAIN, kein staatlich anerkannter Abschluss. Der Avatar ist eine KI und im Kurs als solche gekennzeichnet.</p>
+    </div>
+
+    <div class="room" role="img" aria-label="Animierte Darstellung des virtuellen Schulungsraums: Ein als KI gekennzeichneter Avatar erklärt, stellt eine Übungsfrage, ein KI-Tutor antwortet, am Ende Prüfung und Freigabe durch einen Menschen.">
+      <div class="room-bar"><i></i><i></i><i></i><span>Schulungsraum · Stufe 2 · Woche 3 von 6</span></div>
+      <div class="room-body">
+        <div class="stage">
+          <div class="avatar-row">
+            <div class="av">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="avg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B66E0"/><stop offset="1" stop-color="#12233F"/></linearGradient></defs><circle cx="40" cy="40" r="40" fill="url(#avg)"/><circle cx="40" cy="31" r="13" fill="#C9D4E6"/><path d="M16 70c3-14 13-21 24-21s21 7 24 21" fill="#C9D4E6"/><circle cx="40" cy="31" r="13" fill="none" stroke="#8FB4FF" stroke-width="1.5" stroke-dasharray="2 3"/></svg>
+            </div>
+            <div class="av-meta">
+              <span class="ki-badge">KI-Avatar</span>
+              <b>Kursleitung</b>
+              <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+          </div>
+          <div class="scenes">
+            <div class="scene s1">
+              <p class="sc-tag">Lektion · Bewerten</p>
+              <p class="bubble">Diese Woche bewerten wir Use Cases. Wir rechnen konservativ: höchstens 25 % Ersparnis, die Prüfzeit ziehen wir ab.</p>
+            </div>
+            <div class="scene s2">
+              <p class="sc-tag">Was würden Sie tun?</p>
+              <p class="q">Ein Anbieter verspricht 60 % Zeitersparnis. Womit rechnen Sie?</p>
+              <p class="opt">A · Mit den 60 % des Anbieters</p>
+              <p class="opt good">B · Mit höchstens 25 %, minus Prüfzeit <span>✓</span></p>
+            </div>
+            <div class="scene s3">
+              <p class="sc-tag">KI-Tutor</p>
+              <p class="msg me">Wie messe ich die Ausgangslage?</p>
+              <p class="msg typing"><i></i><i></i><i></i></p>
+              <p class="msg ai">Mit einer Stoppuhr-Stichprobe an 3–5 echten Vorgängen, bevor der Pilot startet.</p>
+            </div>
+            <div class="scene s4">
+              <p class="sc-tag">Abschluss</p>
+              <p class="chk c1"><span>✓</span>Mündliche Prüfung mit dem KI-Avatar</p>
+              <p class="chk c2"><span>✓</span>Prüfbericht nach offengelegtem Raster</p>
+              <p class="chk c3"><span>✓</span>Freigabe durch Dr. Rolf-Michael Schröder</p>
+              <p class="cert">Zertifikat · KI-Beauftragte/r · Kaizen mit KI</p>
+            </div>
+          </div>
+        </div>
+        <ol class="weeks" aria-hidden="true">
+          <li class="done">KI verstehen</li>
+          <li class="done">Erfassen</li>
+          <li class="w3">Bewerten</li>
+          <li class="w4">Entscheiden</li>
+          <li class="w5">Regeln</li>
+          <li class="w6">Verankern</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="dark">
   <div class="wrap">
