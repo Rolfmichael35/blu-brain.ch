@@ -269,6 +269,63 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @keyframes glow{50%{box-shadow:0 0 18px rgba(143,180,255,.25)}}
 .p4{left:20%;top:12%;width:50%;height:26%}.p5{left:30%;top:12%;width:50%;height:26%}
 @media (prefers-reduced-motion:reduce){.cam,.screen .dot,.p2{animation:none!important}}
+/* Case-Bibliothek (Farbwelt Petrol/Messing, klar unterscheidbar vom Prüfungsraum) */
+.lib-sec{background:#0A2226;color:#BFD9D3}
+.lib-sec h2{color:#F3F1EA}
+.lib-sec .eyebrow{color:#7ED9C3}
+.lib-sec .lead{color:#BFD9D3}
+.lib-sec .fine{color:#8FB3AB}
+.lib-tiers li{border-top-color:#1F4A4F}
+.lib-tiers b{color:#F3F1EA}
+.lib-tiers span{color:#8FB3AB}
+.lib-tiers em{color:#E2C27A}
+.lib3d{background:radial-gradient(120% 90% at 50% 30%,#14504F 0%,#0A2226 60%,#06171A 100%);border-color:#1F4A4F}
+.lib3d .back{background:linear-gradient(180deg,#123F3F,#0C2C2E);border-color:rgba(226,194,122,.35);box-shadow:inset 0 0 120px rgba(47,181,154,.25)}
+.lib3d .floor{background:radial-gradient(60% 50% at 50% 85%,rgba(226,194,122,.22),transparent 70%),repeating-linear-gradient(90deg,rgba(226,194,122,.16) 0 2px,transparent 2px 64px),#0E2A29}
+.lib3d .ceil{background:radial-gradient(circle at 25% 50%,rgba(255,226,160,.6) 0 18px,transparent 19px),radial-gradient(circle at 75% 50%,rgba(255,226,160,.6) 0 18px,transparent 19px),#0B2426;opacity:.8}
+.lib3d .left{background:linear-gradient(90deg,#103636,#0B2728)}
+.lib3d .right{background:linear-gradient(270deg,#103636,#0B2728)}
+.lib-sign{border-color:rgba(226,194,122,.8);background:rgba(226,194,122,.14);color:#F3E3B8;box-shadow:0 0 40px rgba(226,194,122,.35);font-family:var(--f-display);letter-spacing:.12em;text-transform:uppercase}
+.shelves{position:absolute;left:6%;right:6%;top:22%;bottom:8%;display:flex;flex-direction:column;justify-content:space-around}
+.shelves i{display:block;height:22%;border-bottom:6px solid #6B5530;background:
+ repeating-linear-gradient(90deg,#2FB59A 0 14px,#0A2226 14px 16px,#E2C27A 16px 26px,#0A2226 26px 28px,#7ED9C3 28px 40px,#0A2226 40px 42px,#3A7F8C 42px 58px,#0A2226 58px 60px,#C9A35C 60px 68px,#0A2226 68px 70px,#1E6F66 70px 86px,#0A2226 86px 92px);
+ background-size:92px 78%;background-repeat:repeat-x;background-position:0 100%;opacity:.85;box-shadow:0 8px 14px rgba(0,0,0,.35)}
+.shelves.side{top:12%;bottom:10%;left:10%;right:10%}
+.shelves.side i{height:16%;opacity:.7}
+.lib-room{background:#071A1C;border-color:#1F4A4F}
+.lib-room .room-bar{background:#0D2C2F;border-color:#1F4A4F;color:#8FB3AB}
+.lib-room .room-bar i{background:#1F4A4F}
+.lib-room .weeks{border-color:#1F4A4F;color:#8FB3AB}
+.lib-scene .room{box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(226,194,122,.25)}
+.lib-av{box-shadow:0 0 0 3px #0D2C2F,0 0 0 5px #2FB59A}
+.lib-room .av-meta b{color:#F3F1EA}
+.lib-badge{background:#E2C27A;color:#0A2226}
+.lib-wave i{background:#7ED9C3}
+.lib-room .sc-tag{color:#E2C27A}
+.msg.me.lib-me{background:#1E6F66}
+.hit{border:1px solid #1F4A4F;border-left:3px solid #2FB59A;border-radius:8px;padding:8px 12px;display:flex;flex-direction:column;font-size:.86rem;opacity:0;animation:reply 20s linear infinite both}
+.hit b{color:#F3F1EA;font-family:var(--f-display);font-weight:600}
+.hit span{color:#8FB3AB}
+.h1{animation-delay:.4s}.h2{animation-delay:1s}
+.meter{display:flex;flex-direction:column;gap:4px;font-size:.84rem;color:#BFD9D3}
+.bar{height:10px;border-radius:5px;background:#12393B;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:5px;width:0;animation:fill 20s ease-out infinite both;animation-delay:5s}
+.m1{background:#2FB59A;--w:100%}.m2{background:#3A7F8C;--w:72%}.m3{background:#E2C27A;--w:64%}
+@keyframes fill{0%,2%{width:0}10%,23%{width:var(--w)}25%,100%{width:0}}
+.note-l{font-size:.8rem;color:#8FB3AB}
+.lib-q{background:#0D2C2F;border-color:#1F4A4F}
+.lib-room .opt{border-color:#1F4A4F;color:#BFD9D3}
+.lib-good{animation-name:goodl!important;animation-delay:10s!important}
+.lib-good span{animation-delay:10s!important}
+@keyframes goodl{0%,11%{border-color:#1F4A4F;background:transparent}13%,23%{border-color:#E2C27A;background:rgba(226,194,122,.12)}25%,100%{border-color:#1F4A4F;background:transparent}}
+.lib-chk span{background:#1E6F66}
+.lib-cert{border-color:#E2C27A;color:#E2C27A}
+.filters li::before{content:"";width:12px;height:12px;border-radius:3px;border:1px solid #1F4A4F}
+.filters li.on{color:#F3F1EA}
+.filters li.on::before{background:#2FB59A;border-color:#2FB59A}
+.filters .f-h{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#E2C27A}
+.filters .f-h::before{display:none}
+@media (prefers-reduced-motion:reduce){.hit,.bar i{animation:none!important;opacity:1}.bar i{width:var(--w)}}
 /* Rechner */
 .calc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;margin-top:40px;align-items:start}
 @media (max-width:820px){.calc{grid-template-columns:1fr}}
@@ -634,6 +691,81 @@ footer a{color:var(--muted)}
     </div>
   </div>
 </section>
+
+<section id="bibliothek" class="lib-sec">
+  <div class="wrap train">
+    <div class="room-scene lib-scene">
+      <div class="exam3d lib3d" aria-hidden="true"><div class="cam">
+        <div class="face back"><div class="screen lib-sign">Case-Bibliothek</div><div class="shelves"><i></i><i></i><i></i></div></div>
+        <div class="face left"><div class="shelves side"><i></i><i></i><i></i><i></i></div></div>
+        <div class="face right"><div class="shelves side"><i></i><i></i><i></i><i></i></div></div>
+        <div class="face floor"></div>
+        <div class="face ceil"></div>
+      </div></div>
+      <div class="room lib-room" role="img" aria-label="Animierte Beispielansicht der Case-Bibliothek: KI-Suche nach Fällen, Scorecard eines Falls mit Prognose und Ist, eine Entscheidungsfrage und die Lehren aus dem Fall.">
+        <div class="room-bar"><i></i><i></i><i></i><span>Case-Bibliothek · Beispielansicht</span></div>
+        <div class="room-body">
+          <div class="stage">
+            <div class="avatar-row">
+              <div class="av lib-av"><svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="avl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2FB59A"/><stop offset="1" stop-color="#0B2A2E"/></linearGradient></defs><circle cx="40" cy="40" r="40" fill="url(#avl)"/><circle cx="40" cy="31" r="13" fill="#D5EFE8"/><path d="M16 70c3-14 13-21 24-21s21 7 24 21" fill="#D5EFE8"/></svg></div>
+              <div class="av-meta"><span class="ki-badge lib-badge">KI-Avatar</span><b>Ihre Führung durch die Fälle</b><span class="wave lib-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <div class="scenes">
+              <div class="scene s1">
+                <p class="sc-tag">KI-Suche</p>
+                <p class="msg me lib-me">Welche Cases gibt es zur Belegerfassung im Treuhand?</p>
+                <div class="hit h1"><b>Treuhand · 10–49 MA</b><span>Belegerfassung · Evidenz B</span></div>
+                <div class="hit h2"><b>Treuhand · 1–9 MA</b><span>Kontierungsvorschlag · Evidenz A</span></div>
+              </div>
+              <div class="scene s2">
+                <p class="sc-tag">Case-Scorecard</p>
+                <div class="meter"><span>Umsetzungsgrad</span><div class="bar"><i class="m1"></i></div></div>
+                <div class="meter"><span>Nutzen · Prognose</span><div class="bar"><i class="m2"></i></div></div>
+                <div class="meter"><span>Nutzen · gemessenes Ist</span><div class="bar"><i class="m3"></i></div></div>
+                <p class="note-l">Nur gemessene Zahlen, anonymisiert und gerundet.</p>
+              </div>
+              <div class="scene s3">
+                <p class="sc-tag">Wie hätten Sie entschieden?</p>
+                <p class="q lib-q">Der Pilot spart weniger Zeit als geplant. Was tun Sie?</p>
+                <p class="opt">A · Trotzdem ausrollen</p>
+                <p class="opt good lib-good">B · Ursache klären, Ablauf neu gestalten <span>✓</span></p>
+              </div>
+              <div class="scene s4">
+                <p class="sc-tag">Lehren aus dem Fall</p>
+                <p class="chk c1 lib-chk"><span>✓</span>Was schiefging, offen dokumentiert</p>
+                <p class="chk c2 lib-chk"><span>✓</span>Auch verworfene Cases mit Begründung</p>
+                <p class="chk c3 lib-chk"><span>✓</span>Jeden Monat ein neuer Case</p>
+                <p class="cert lib-cert">Live-Case-Call · einmal pro Quartal</p>
+              </div>
+            </div>
+          </div>
+          <ul class="weeks filters" aria-hidden="true">
+            <li class="f-h">Filter</li>
+            <li class="on">Branche</li>
+            <li class="on">Ablauf</li>
+            <li>Werkzeug</li>
+            <li>Nutzen</li>
+            <li>Evidenzklasse</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow">Nach dem Zertifikat</p>
+      <h2>Die Case-Bibliothek für KI-Beauftragte</h2>
+      <p class="lead">Ein zweiter virtueller Raum, nur für zertifizierte KI-Beauftragte: geprüfte KI-Fälle aus KMU, immer gleich aufgebaut, von der Ausgangslage über die Scorecard bis zu den Lehren. Der KI-Avatar führt durch die Fälle, der KI-Tutor beantwortet Fragen nur aus der Bibliothek.</p>
+      <ul class="tiers lib-tiers">
+        <li><b>Einzelperson</b><span>Bibliothek, KI-Suche, Live-Case-Calls</span><em>CHF 15 pro Monat<br>oder 150 pro Jahr</em></li>
+        <li><b>Firma</b><span>Für bis zu 5 KI-Beauftragte</span><em>CHF 400 pro Jahr</em></li>
+        <li><b>Nach Stufe 2</b><span>Einstieg direkt nach dem Zertifikat</span><em>12 Monate gratis</em></li>
+        <li><b>Mit Stufe 3 oder BLU-BRAIN-Abo</b><span>Zusammen mit Update-Modul und Verlängerung des Zertifikats</span><em>inbegriffen</em></li>
+      </ul>
+      <p class="fine">Preise netto. Zugang nur mit gültigem Zertifikat Stufe 2. Alle Fälle anonymisiert, mit Freigabe der Beteiligten. Aufgenommen werden nur gemessene Zahlen, keine Prognosen ohne Ist-Wert. Die Ansicht oben ist ein Beispiel.</p>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="dark">
